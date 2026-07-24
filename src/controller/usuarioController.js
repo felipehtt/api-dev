@@ -1,19 +1,24 @@
 import { Router } from "express";
-import { salvarUsuario } from "../repository/usuarioRepository.js";
+import salvarUsuarioService from "../service/usuario/salvarUsuarioService.js";
 
 const endpoints = Router();
 
 endpoints.post('/usuario', async (req, resp) => {
 
-    let usuarioObj = req.body;
+    try {
+        let usuarioObj = req.body;
+        let id = await salvarUsuarioService(usuarioObj);
 
-    let id = await salvarUsuario(usuarioObj);
+        resp.send({
 
-    resp.send({
+            id: id 
 
-        id: id
-
-    })
+        });
+    }
+    catch (err) {
+        logErro(err)
+        resp.status(400).send(criarErro(err));
+    }
 
 });
 

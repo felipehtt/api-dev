@@ -14,6 +14,6 @@ export async function salvarUsuario(usuario) {
 
     let idUsuario = resposta.rows[0].id;
 
-    return idUsuario;
+    return idUsuario; 
 
 };
