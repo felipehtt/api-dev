@@ -3,7 +3,7 @@ import './utils/global.js'
 import 'dotenv/config.js';
 import express from 'express';
 import cors from 'cors';
-
+import './repository/connection.js'
 
 const servidor = express();
 servidor.use(cors());
