@@ -11,11 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/felipehtt/api-dev.git"
   },
-  "type":"module",
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/felipehtt/api-dev/issues"
   },
