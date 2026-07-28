@@ -17,3 +17,18 @@ export async function salvarUsuario(usuario) {
     return idUsuario; 
 
 };
+
+export async function buscarUsuario() {
+
+    const comando = `
+
+        select id, nome, email from users;
+
+    `
+    let resposta = await query(comando);
+
+    let usuarios = resposta.rows[0];
+
+    return usuarios;
+
+}
